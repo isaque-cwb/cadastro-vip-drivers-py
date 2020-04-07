@@ -30,7 +30,7 @@
       <column type="gchararray"/>
       <!-- column-name Email -->
       <column type="gchararray"/>
-      <!-- column-name Indicado por -->
+      <!-- column-name Indicado -->
       <column type="gchararray"/>
     </columns>
   </object>
@@ -38,8 +38,8 @@
     <columns>
       <!-- column-name Rua -->
       <column type="gchararray"/>
-      <!-- column-name Número -->
-      <column type="gint"/>
+      <!-- column-name Numero -->
+      <column type="gchararray"/>
       <!-- column-name Bairro -->
       <column type="gchararray"/>
       <!-- column-name Cidade -->
@@ -760,21 +760,6 @@
             <property name="margin_bottom">5</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Dados do parceiro</property>
-                <attributes>
-                  <attribute name="font-desc" value="Calibri Oblique 12"/>
-                </attributes>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkTreeView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -784,7 +769,7 @@
                   <object class="GtkTreeSelection"/>
                 </child>
                 <child>
-                  <object class="GtkTreeViewColumn">
+                  <object class="GtkTreeViewColumn" id="Id">
                     <property name="title" translatable="yes">Id</property>
                     <child>
                       <object class="GtkCellRendererText"/>
@@ -842,22 +827,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Endereço</property>
-                <attributes>
-                  <attribute name="font-desc" value="Calibri Oblique 12"/>
-                </attributes>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
@@ -917,22 +887,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">3</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Dados do carro</property>
-                <attributes>
-                  <attribute name="font-desc" value="Calibri Oblique 12"/>
-                </attributes>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">4</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -981,22 +936,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">5</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Contato Familiar</property>
-                <attributes>
-                  <attribute name="font-desc" value="Calibri Oblique 12"/>
-                </attributes>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">6</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
@@ -1034,7 +974,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">7</property>
+                <property name="position">3</property>
               </packing>
             </child>
             <child>

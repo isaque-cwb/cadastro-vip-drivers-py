@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="834316f4-7fd2-426b-8d53-921d8f16cb38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro_vip_drivers.py" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro_vip_drivers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inteface_grafica.glade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inteface_grafica.glade" beforeDir="false" afterPath="$PROJECT_DIR$/inteface_grafica.glade" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,19 +17,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cadastro_vip_drivers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="112">
+              <caret line="100" column="64" lean-forward="true" selection-start-line="100" selection-start-column="64" selection-end-line="100" selection-end-column="64" />
               <folding>
-                <element signature="e#199#214#0" />
-                <element signature="e#271#456#0" />
-                <element signature="e#560#902#0" />
-                <element signature="e#807#1067#0" />
-                <element signature="e#1291#1295#0" />
-                <element signature="e#1357#1361#0" />
-                <element signature="e#1421#1425#0" />
-                <element signature="e#1491#1495#0" />
-                <element signature="e#1753#1757#0" />
+                <element signature="e#556#571#0" />
+                <element signature="e#628#829#0" />
+                <element signature="e#882#1224#0" />
+                <element signature="e#1281#1541#0" />
+                <element signature="e#2550#2600#0" />
+                <element signature="e#1718#1766#0" />
+                <element signature="e#1822#1869#0" />
+                <element signature="e#1931#1980#0" />
+                <element signature="e#2045#2094#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../mingw64/lib/python3.8/site-packages/gi/overrides/Gtk.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="996" selection-start-line="996" selection-end-line="996" />
             </state>
           </provider>
         </entry>
@@ -54,10 +62,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-12" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -141,15 +149,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="653" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.123176664" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.060365368" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32958803" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33020636" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36968577" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988764" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -171,27 +179,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../mingw64/lib/python3.8/site-packages/gi/overrides/GObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../mingw64/lib/python3.8/site-packages/gi/overrides/Gtk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="891" selection-start-line="891" selection-end-line="891" />
+        <state relative-caret-position="105">
+          <caret line="996" selection-start-line="996" selection-end-line="996" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cadastro_vip_drivers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="112">
+          <caret line="100" column="64" lean-forward="true" selection-start-line="100" selection-start-column="64" selection-end-line="100" selection-end-column="64" />
           <folding>
-            <element signature="e#199#214#0" />
-            <element signature="e#271#456#0" />
-            <element signature="e#560#902#0" />
-            <element signature="e#807#1067#0" />
-            <element signature="e#1291#1295#0" />
-            <element signature="e#1357#1361#0" />
-            <element signature="e#1421#1425#0" />
-            <element signature="e#1491#1495#0" />
-            <element signature="e#1753#1757#0" />
+            <element signature="e#556#571#0" />
+            <element signature="e#628#829#0" />
+            <element signature="e#882#1224#0" />
+            <element signature="e#1281#1541#0" />
+            <element signature="e#2550#2600#0" />
+            <element signature="e#1718#1766#0" />
+            <element signature="e#1822#1869#0" />
+            <element signature="e#1931#1980#0" />
+            <element signature="e#2045#2094#0" />
           </folding>
         </state>
       </provider>
