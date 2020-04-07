@@ -1,0 +1,3 @@
+1 - criar login ou criar um metodo para gerar nome e senha  a partir da escolha do usuário
+2 - criar metodo de banco de dados ou ligação com MySql
+3 - 
