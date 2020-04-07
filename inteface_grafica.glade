@@ -30,6 +30,8 @@
       <column type="gchararray"/>
       <!-- column-name Email -->
       <column type="gchararray"/>
+      <!-- column-name Indicado por -->
+      <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkListStore" id="endereco_parceiro">
@@ -47,17 +49,18 @@
   <object class="GtkWindow" id="tela_principal">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">login</property>
-    <property name="default_width">400</property>
-    <property name="default_height">400</property>
-    <property name="icon_name">changes-prevent</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <property name="icon">Logo.ico</property>
     <signal name="destroy" handler="on_tela_principal_destroy" swapped="no"/>
     <child type="titlebar">
       <placeholder/>
     </child>
     <child>
-      <object class="GtkStack">
+      <object class="GtkStack" id="stack">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="transition_type">crossfade</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
@@ -188,7 +191,7 @@
           </object>
           <packing>
             <property name="name">tela_login</property>
-            <property name="title" translatable="yes">page0</property>
+            <property name="title" translatable="yes">Login</property>
           </packing>
         </child>
         <child>
@@ -232,13 +235,13 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="button_listar">
+                  <object class="GtkButton" id="button_listar_inicial">
                     <property name="label" translatable="yes">Listar</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="margin_right">5</property>
-                    <signal name="clicked" handler="on_button_listar_clicked" swapped="no"/>
+                    <signal name="clicked" handler="on_button_listar_inicial_clicked" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -272,7 +275,7 @@
           </object>
           <packing>
             <property name="name">tela_inicial</property>
-            <property name="title" translatable="yes">page1</property>
+            <property name="title" translatable="yes">Cadastro Vip Drivers</property>
             <property name="position">1</property>
           </packing>
         </child>
@@ -751,6 +754,10 @@
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">5</property>
+            <property name="margin_top">5</property>
+            <property name="margin_bottom">5</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel">
@@ -816,6 +823,17 @@
                       <object class="GtkCellRendererText"/>
                       <attributes>
                         <attribute name="text">3</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="title" translatable="yes">Indicado por</property>
+                    <child>
+                      <object class="GtkCellRendererText"/>
+                      <attributes>
+                        <attribute name="text">4</attribute>
                       </attributes>
                     </child>
                   </object>
@@ -1066,7 +1084,7 @@
             </child>
           </object>
           <packing>
-            <property name="name">page3</property>
+            <property name="name">tela_listar</property>
             <property name="title" translatable="yes">page3</property>
             <property name="position">3</property>
           </packing>
