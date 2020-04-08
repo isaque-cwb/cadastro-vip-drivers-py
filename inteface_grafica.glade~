@@ -760,6 +760,21 @@
             <property name="margin_bottom">5</property>
             <property name="orientation">vertical</property>
             <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Dados do Parceiro(a)</property>
+                <attributes>
+                  <attribute name="font-desc" value="Calibri 12"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkTreeView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -769,7 +784,7 @@
                   <object class="GtkTreeSelection"/>
                 </child>
                 <child>
-                  <object class="GtkTreeViewColumn">
+                  <object class="GtkTreeViewColumn" id="Id">
                     <property name="title" translatable="yes">Id</property>
                     <child>
                       <object class="GtkCellRendererText"/>
@@ -827,7 +842,22 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">0</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Endereço</property>
+                <attributes>
+                  <attribute name="font-desc" value="Calibri 12"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
@@ -887,7 +917,22 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Dados do Carro</property>
+                <attributes>
+                  <attribute name="font-desc" value="Calibri 12"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
               </packing>
             </child>
             <child>
@@ -936,7 +981,22 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Contato Familiar</property>
+                <attributes>
+                  <attribute name="font-desc" value="Calibri 12"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">6</property>
               </packing>
             </child>
             <child>
@@ -974,7 +1034,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">3</property>
+                <property name="position">7</property>
               </packing>
             </child>
             <child>

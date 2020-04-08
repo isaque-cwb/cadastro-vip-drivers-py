@@ -32,6 +32,7 @@ class Usuario_contato_familiar():
         self.tel_familiar = tel_familiar
 
 
+
 class Controlador(object):
     def __init__(self):
         self.Stack = Builder.get_object("stack")
@@ -46,6 +47,8 @@ class Controlador(object):
         self.banco_dados_carro = []
         self.banco_dados_contato_familiar = []
 
+        self.lembrar = []
+
 
 
     def on_tela_principal_destroy(self, window):
@@ -54,16 +57,39 @@ class Controlador(object):
     def on_button_login_clicked(self, button):
         nome = Builder.get_object("nome").get_text()
         senha = Builder.get_object("senha").get_text()
-        lembrar = Builder.get_object("lembrar").get_active()
-        self.login(nome, senha, lembrar)
+        self.login(nome, senha)
 
-    def login(self, nome, senha, lembrar):
-        if nome == 'admin' and senha == '1234':
-            self.mensagem('Bem-vindo!', 'Usuário logado com sucesso!', 'emblem-default')
+
+
+    def login(self, nome, senha):
+
+        if nome == 'Isaque' and senha == '123':
+            self.mensagem('Bem-vindo! ' + nome  , 'ADM Logado com sucesso!', 'emblem-default')
+            self.Stack.set_visible_child_name("tela_inicial")
+            Window.props.title = 'Cadastro Vip Drivers'
+        elif nome == 'Alex' and senha == '456':
+            self.mensagem('Bem-vindo! ' + nome  , 'ADM Logado com sucesso!', 'emblem-default')
+            self.Stack.set_visible_child_name("tela_inicial")
+            Window.props.title = 'Cadastro Vip Drivers'
+        elif nome == 'Marcos' and senha == '789':
+            self.mensagem('Bem-vindo! ' + nome  , 'ADM Logado com sucesso!', 'emblem-default')
+            self.Stack.set_visible_child_name("tela_inicial")
+            Window.props.title = 'Cadastro Vip Drivers'
+        elif nome == 'Luiz' and senha == '987':
+            self.mensagem('Bem-vindo! ' + nome  , 'ADM Logado com sucesso!', 'emblem-default')
+            self.Stack.set_visible_child_name("tela_inicial")
+            Window.props.title = 'Cadastro Vip Drivers'
+        elif nome == 'Giliar' and senha == '654':
+            self.mensagem('Bem-vindo! ' + nome  , 'ADM Logado com sucesso!', 'emblem-default')
+            self.Stack.set_visible_child_name("tela_inicial")
+            Window.props.title = 'Cadastro Vip Drivers'
+        elif nome == 'Norberto' and senha == '321':
+            self.mensagem('Bem-vindo! ' + nome  , 'ADM Logado com sucesso!', 'emblem-default')
             self.Stack.set_visible_child_name("tela_inicial")
             Window.props.title = 'Cadastro Vip Drivers'
         else:
             self.mensagem('Aviso!', 'Email ou senha incorretos!', 'dialog-error')
+
 
     def mensagem(self, param, param1, param2):
         mensagem: Gtk.MessageDialog = Builder.get_object('mensagem')
@@ -83,6 +109,10 @@ class Controlador(object):
 
     def on_button_sair_clicked(self, button):
         self.Stack.set_visible_child_name("tela_login")
+        Builder.get_object("nome").set_text('')
+        Builder.get_object("senha").set_text('')
+        Builder.get_object("nome").set_text(self.lembrar[0])
+        Builder.get_object("senha").set_text(self.lembrar[1])
 
     def on_button_cad_voltar_clicked(self, button):
         self.Stack.set_visible_child_name("tela_inicial")
@@ -119,9 +149,6 @@ class Controlador(object):
                 self.modelo_armazenamento_dados_contato_familiar.append((Usuario_contato_familiar.nome_familiar,
                                               Usuario_contato_familiar.tel_familiar))
 
-        print(self.banco_dados_parceiro)
-
-
 
     def on_button_cad_cadastrar_clicked(self, button):
 
@@ -142,23 +169,61 @@ class Controlador(object):
         nome_fam = Builder.get_object("nome_cad_familiar").get_text()
         tel_fam = Builder.get_object("tel_cad_familiar").get_text()
 
-        if nome != '':
+
+
+        if nome != '' and tel != '' and email != '' :
             self.banco_dados_parceiro.append(Usuario_dados_parceiro(len(self.banco_dados_parceiro) + 1,
                                                                     nome, tel, email, indicado))
             self.banco_dados_endereco_parceiro.append(Usuario_endereco_parceiro(rua, numero, bairro, cidade))
             self.banco_dados_carro.append(Usuario_dados_carro(modelo, cor, placa))
             self.banco_dados_contato_familiar.append(Usuario_contato_familiar(nome_fam, tel_fam))
 
-            self.mensagem('Aviso', 'Usuário ' + nome + ' cadastrado!', 'dialog-emblem-default')
 
+            self.mensagem('Aviso', 'Usuário ' + nome + ' cadastrado!', 'dialog-information')
 
         else:
-            self.mensagem('Aviso', 'Campo "Nome" Obrigatório!', 'dialog-error')
+            self.mensagem('Aviso', 'Campo "Nome, Telefone" Obrigatório!', 'dialog-error')
 
 
+        Builder.get_object("nome_cad").set_text('')
+        Builder.get_object("tel_cad").set_text('')
+        Builder.get_object("email_cad").set_text('')
+        Builder.get_object("indicado_cad").set_text('')
 
-    def on_lembrar_toggled(self, activ):
-        pass
+        Builder.get_object("rua_cad").set_text('')
+        Builder.get_object("num_cad").set_text('')
+        Builder.get_object("bairro_cad").set_text('')
+        Builder.get_object("cidade_cad").set_text('')
+
+        Builder.get_object("cor_cad").set_text('')
+        Builder.get_object("placa_cad").set_text('')
+        Builder.get_object("modelo_cad").set_text('')
+
+        Builder.get_object("nome_cad_familiar").set_text('')
+        Builder.get_object("tel_cad_familiar").set_text('')
+
+
+    def on_lembrar_toggled(self, button):
+        acao = button.get_active()
+        if acao == True:
+
+            nome = Builder.get_object("nome").get_text()
+            senha = Builder.get_object("senha").get_text()
+            if nome == '' :
+                self.mensagem('Aviso', 'para lembrar, Informe um USUÁRIO', 'dialog-error')
+                button.set_active(False)
+            elif senha == '':
+                 self.mensagem('Aviso', 'para lembrar, Informe uma SENHA', 'dialog-error')
+                 button.set_active(False)
+            else:
+                 self.lembrar.append(nome)
+                 self.lembrar.append(senha)
+                 print(self.lembrar[0])
+                 print(self.lembrar[1])
+
+        else:
+            self.lembrar.clear()
+
 
 
 Builder = Gtk.Builder()
